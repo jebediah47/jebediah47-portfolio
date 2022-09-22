@@ -7,7 +7,7 @@ const JebediahPortfolio: FunctionComponent = () => {
       <div className="card-body mx-3">
         <h2 className="card-title">jebediah47.github.io</h2>
         <p className="text-base">
-          The website you are in right now... <br /> And my personal portfolio!
+          The website you are in right now... And my personal portfolio!
         </p>
         <div className="divider">Programming languages</div>
         <div className="flex flex-row justify-center items-center">
