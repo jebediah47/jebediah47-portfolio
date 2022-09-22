@@ -1,0 +1,18 @@
+:root {
+  --hero-gradient: linear-gradient(45deg, #3b82f6, #4ade80);
+}
+
+@keyframes text-animated-gradient {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+#hero--name {
+  background-image: var(--hero-gradient);
+  background-size: 400%;
+  animation: text-animated-gradient 5s infinite alternate;
+}
