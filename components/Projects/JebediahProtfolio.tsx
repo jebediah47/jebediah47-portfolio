@@ -5,7 +5,7 @@ const JebediahPortfolio: FunctionComponent = () => {
   return (
     <div className="card card-compact w-96 bg-slate-700 shadow-xl">
       <div className="card-body mx-3">
-        <h2 className="card-title">jebediah47.github.io</h2>
+        <h2 className="card-title">jebediah47-portfolio</h2>
         <p className="text-base">
           The website you are in right now... And my personal portfolio!
         </p>

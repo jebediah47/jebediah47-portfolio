@@ -1,3 +1,4 @@
+import scrollToElement from "../../functions/scrollToElement";
 import { FunctionComponent } from "react";
 import Jebfetch from "./Jebfetch";
 import Link from "next/link";
@@ -22,7 +23,12 @@ const Hero: FunctionComponent = () => {
             full-stack developer, <br />I specialize in the development of web
             applications.
           </p>
-          <button className="btn btn-primary">Projects</button>
+          <button
+            className="btn btn-primary"
+            onClick={() => scrollToElement("projects__element")}
+          >
+            Projects
+          </button>
           <label
             htmlFor="github-redirect-modal"
             className="btn modal-button ml-3"
