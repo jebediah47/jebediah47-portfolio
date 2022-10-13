@@ -1,13 +1,36 @@
 import scrollToElement from "../../functions/scrollToElement";
-import { FunctionComponent } from "react";
+import { useInView } from "react-intersection-observer";
+import { FunctionComponent, useEffect } from "react";
 import Jebfetch from "./Jebfetch";
 import Link from "next/link";
 
 const Hero: FunctionComponent = () => {
+  const [ref, inView] = useInView({
+    threshold: 0.5,
+  });
+  useEffect(() => {
+    if (inView) {
+      document
+        .getElementById("about_me_desktop")!
+        .classList.add("btn", "btn-outline", "btn-primary");
+      document
+        .getElementById("about_me_mobile_menu")!
+        .classList.add("btn", "btn-outline", "btn-primary");
+    } else {
+      document
+        .getElementById("about_me_desktop")!
+        .classList.remove("btn", "btn-outline", "btn-primary");
+      document
+        .getElementById("about_me_mobile_menu")!
+        .classList.remove("btn", "btn-outline", "btn-primary");
+    }
+  });
+
   return (
     <div
       className="hero min-h-screen bg-[url('../public/images/coding_background_unsplash.webp')]"
       id="hero__element"
+      ref={ref}
     >
       <div className="hero-content flex-col lg:flex-row-reverse">
         <Jebfetch />

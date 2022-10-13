@@ -1,11 +1,33 @@
 import ContinuousIntegration from "./ContinuousIntegration";
-import { FunctionComponent } from "react";
+import { useInView } from "react-intersection-observer";
+import { FunctionComponent, useEffect } from "react";
 import BackendSkills from "./Backend";
 import Frontend from "./Frontend";
 
 const Skills: FunctionComponent = () => {
+  const [ref, inView] = useInView({
+    threshold: 1,
+  });
+  useEffect(() => {
+    if (inView) {
+      document
+        .getElementById("skills_desktop")!
+        .classList.add("btn", "btn-outline", "btn-primary");
+      document
+        .getElementById("skills_mobile_menu")!
+        .classList.add("btn", "btn-outline", "btn-primary");
+    } else {
+      document
+        .getElementById("skills_desktop")!
+        .classList.remove("btn", "btn-outline", "btn-primary");
+      document
+        .getElementById("skills_mobile_menu")!
+        .classList.remove("btn", "btn-outline", "btn-primary");
+    }
+  });
+
   return (
-    <div className="py-8" id="skills__element">
+    <div className="py-8" id="skills__element" ref={ref}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:text-center">
           <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">

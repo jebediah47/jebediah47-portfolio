@@ -28,17 +28,26 @@ const Navbar: FunctionComponent = () => {
             className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
           >
             <li>
-              <button onClick={() => scrollToElement("hero__element")}>
+              <button
+                id="about_me_mobile_menu"
+                onClick={() => scrollToElement("hero__element")}
+              >
                 About Me
               </button>
             </li>
             <li>
-              <button onClick={() => scrollToElement("skills__element")}>
+              <button
+                id="skills_mobile_menu"
+                onClick={() => scrollToElement("skills__element")}
+              >
                 Skills
               </button>
             </li>
             <li>
-              <button onClick={() => scrollToElement("projects__element")}>
+              <button
+                id="projects_mobile_menu"
+                onClick={() => scrollToElement("projects__element")}
+              >
                 Projects
               </button>
             </li>
@@ -51,17 +60,26 @@ const Navbar: FunctionComponent = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal p-0">
           <li>
-            <button onClick={() => scrollToElement("hero__element")}>
+            <button
+              id="about_me_desktop"
+              onClick={() => scrollToElement("hero__element")}
+            >
               About Me
             </button>
           </li>
           <li>
-            <button onClick={() => scrollToElement("skills__element")}>
+            <button
+              id="skills_desktop"
+              onClick={() => scrollToElement("skills__element")}
+            >
               Skills
             </button>
           </li>
           <li>
-            <button onClick={() => scrollToElement("projects__element")}>
+            <button
+              id="projects_desktop"
+              onClick={() => scrollToElement("projects__element")}
+            >
               Projects
             </button>
           </li>

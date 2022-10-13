@@ -1,11 +1,33 @@
+import { useInView } from "react-intersection-observer";
+import { FunctionComponent, useEffect } from "react";
 import JebediahPortfolio from "./JebediahProtfolio";
-import { FunctionComponent } from "react";
 import Galacticabot from "./Galacticabot";
 import WoofWeb from "./WoofWeb";
 
 const Projects: FunctionComponent = () => {
+  const [ref, inView] = useInView({
+    threshold: 1,
+  });
+  useEffect(() => {
+    if (inView) {
+      document
+        .getElementById("projects_desktop")!
+        .classList.add("btn", "btn-outline", "btn-primary");
+      document
+        .getElementById("projects_mobile_menu")!
+        .classList.add("btn", "btn-outline", "btn-primary");
+    } else {
+      document
+        .getElementById("projects_desktop")!
+        .classList.remove("btn", "btn-outline", "btn-primary");
+      document
+        .getElementById("projects_mobile_menu")!
+        .classList.remove("btn", "btn-outline", "btn-primary");
+    }
+  });
+
   return (
-    <div className="py-5" id="projects__element">
+    <div className="py-5" id="projects__element" ref={ref}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:text-center">
           <h2 className="text-base text-amber-400 font-semibold tracking-wide uppercase">

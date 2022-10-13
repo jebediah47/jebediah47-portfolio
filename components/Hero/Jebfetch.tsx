@@ -8,7 +8,7 @@ const Jebfetch: FunctionComponent = () => {
           <code>jebfetch</code>
         </pre>
         <pre data-prefix=">" className="text-warning">
-          <code>🧠 macOS Monterey (12.6) </code>
+          <code>🧠 Debian Bookworm</code>
         </pre>
         <pre data-prefix=">" className="text-error">
           <code>🤖 AMD Ryzen 5 2600</code>
@@ -17,10 +17,10 @@ const Jebfetch: FunctionComponent = () => {
           <code>🪟 Aqua</code>
         </pre>
         <pre data-prefix=">" className="text-info">
-          <code>🍎 Kernel 21.6.0</code>
+          <code>🐧 Linux 5.19.15-xanmod</code>
         </pre>
         <pre data-prefix=">" className="text-blue-500">
-          <code>🖥 /bin/zsh</code>
+          <code>🐚 /bin/zsh</code>
         </pre>
         <pre data-prefix=">" className="text-green-400">
           <code>📏 🤯 / 16GB</code>

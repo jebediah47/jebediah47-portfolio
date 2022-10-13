@@ -8,7 +8,7 @@ const Galacticabot: FunctionComponent = () => {
         <h2 className="card-title">galactica-bot</h2>
         <p className="text-base">
           An open-source Discord bot made with Typescript using the Discord.js
-          v13 library.
+          v14 library.
         </p>
         <div className="divider">Programming languages</div>
         <div className="flex flex-row justify-center items-center mb-5">
