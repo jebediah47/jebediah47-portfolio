@@ -6,7 +6,7 @@ import Frontend from "./Frontend";
 
 const Skills: FunctionComponent = () => {
   const [ref, inView] = useInView({
-    threshold: 1,
+    threshold: 0.5,
   });
   useEffect(() => {
     if (inView) {
@@ -15,14 +15,14 @@ const Skills: FunctionComponent = () => {
         .classList.add("btn", "btn-outline", "btn-primary");
       document
         .getElementById("skills_mobile_menu")!
-        .classList.add("btn", "btn-outline", "btn-primary");
+        .classList.add("btn-active");
     } else {
       document
         .getElementById("skills_desktop")!
         .classList.remove("btn", "btn-outline", "btn-primary");
       document
         .getElementById("skills_mobile_menu")!
-        .classList.remove("btn", "btn-outline", "btn-primary");
+        .classList.remove("btn-active");
     }
   });
 

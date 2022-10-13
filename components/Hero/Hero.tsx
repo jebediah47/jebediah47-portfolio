@@ -15,14 +15,14 @@ const Hero: FunctionComponent = () => {
         .classList.add("btn", "btn-outline", "btn-primary");
       document
         .getElementById("about_me_mobile_menu")!
-        .classList.add("btn", "btn-outline", "btn-primary");
+        .classList.add("btn-active");
     } else {
       document
         .getElementById("about_me_desktop")!
         .classList.remove("btn", "btn-outline", "btn-primary");
       document
         .getElementById("about_me_mobile_menu")!
-        .classList.remove("btn", "btn-outline", "btn-primary");
+        .classList.remove("btn-active");
     }
   });
 
